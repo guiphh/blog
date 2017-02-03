@@ -6,8 +6,8 @@
     <atom:link href="localhost/feed.xml" rel="self" type="application/rss+xml" />
     <description>Personnal Website</description>
     <language>en-gb</language>
-    <pubDate>Fri, 3 Feb 2017 23:05:25 +0100</pubDate>
-    <lastBuildDate>Fri, 3 Feb 2017 23:05:25 +0100</lastBuildDate>
+    <pubDate>Sat, 4 Feb 2017 00:56:48 +0100</pubDate>
+    <lastBuildDate>Sat, 4 Feb 2017 00:56:48 +0100</lastBuildDate>
 
     <item>
       <title>Build Sql</title>
@@ -48,7 +48,7 @@ The main difficulty is that we have scripts that needs to be applyed once and ot
 &lt;/div&gt;
 &lt;div class=&quot;imageblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;img src=&quot;/img/case1.png&quot; alt=&quot;case1&quot; width=&quot;600&quot; height=&quot;252&quot;&gt;
+&lt;img src=&quot;/website/img/case1.png&quot; alt=&quot;case1&quot; width=&quot;600&quot; height=&quot;252&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
@@ -101,7 +101,7 @@ the code of the package refelects this version.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;imageblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;img src=&quot;/img/case2.png&quot; alt=&quot;case2&quot; width=&quot;720&quot; height=&quot;224&quot;&gt;
+&lt;img src=&quot;/website/img/case2.png&quot; alt=&quot;case2&quot; width=&quot;720&quot; height=&quot;224&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;admonitionblock note&quot;&gt;
