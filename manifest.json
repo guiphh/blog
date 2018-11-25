@@ -1,0 +1,21 @@
+{
+    "short_name": "Guillaume Trompette",
+    "name": "GuiGui",
+    "icons": [
+      {
+        "src": "/fav.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/fav.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation" : "portrait",
+    "background_color": "#000000",
+    "theme_color": "#000000"
+  }
