@@ -1,0 +1,21 @@
+
+User-agent: *
+
+
+Disallow: /blog/second-post.1/
+
+Disallow: /blog/second-post/
+
+Disallow: /blog/first-blog/
+
+Disallow: /blog/test/
+
+Disallow: /offline/
+
+Disallow: /blog/
+
+Disallow: /categories/
+
+Disallow: /
+
+Disallow: /tags/
