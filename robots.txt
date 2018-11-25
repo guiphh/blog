@@ -6,6 +6,8 @@ Disallow: /blog/second-post.1/
 
 Disallow: /blog/second-post/
 
+Disallow: /about/
+
 Disallow: /blog/first-blog/
 
 Disallow: /blog/test/
