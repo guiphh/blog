@@ -3,49 +3,50 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/blog/second-post.1/</loc>
+    <loc>https://guiphh.github.io/blog/second-post.1/</loc>
     <lastmod>2018-11-23T23:32:09+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/blog/second-post/</loc>
+    <loc>https://guiphh.github.io/blog/second-post/</loc>
     <lastmod>2018-11-23T23:32:09+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://guiphh.github.io/blog/first-blog/</loc>
     <lastmod>2018-11-22T22:32:09+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/blog/first-blog/</loc>
+    <loc>https://guiphh.github.io/blog/test/</loc>
     <lastmod>2018-11-22T22:32:09+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/blog/test/</loc>
-    <lastmod>2018-11-22T22:32:09+01:00</lastmod>
+    <loc>https://guiphh.github.io/offline/</loc>
+    <lastmod>2016-10-16T19:28:41+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://guiphh.github.io/blog/</loc>
     <lastmod>2018-11-23T23:32:09+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://guiphh.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://guiphh.github.io/</loc>
     <lastmod>2018-11-23T23:32:09+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://guiphh.github.io/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>

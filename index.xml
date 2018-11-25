@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to my blog on My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Welcome to my blog on My New Hugo Site</description>
+    <title>My New Hugo Site</title>
+    <link>https://guiphh.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Nov 2018 23:32:09 +0100</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://guiphh.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Another Post</title>
-      <link>http://localhost:1313/blog/second-post.1/</link>
+      <link>https://guiphh.github.io/blog/second-post.1/</link>
       <pubDate>Fri, 23 Nov 2018 23:32:09 +0100</pubDate>
       
-      <guid>http://localhost:1313/blog/second-post.1/</guid>
+      <guid>https://guiphh.github.io/blog/second-post.1/</guid>
       <description> Another post </description>
     </item>
     
     <item>
       <title>Another Post</title>
-      <link>http://localhost:1313/blog/second-post/</link>
+      <link>https://guiphh.github.io/blog/second-post/</link>
       <pubDate>Fri, 23 Nov 2018 23:32:09 +0100</pubDate>
       
-      <guid>http://localhost:1313/blog/second-post/</guid>
+      <guid>https://guiphh.github.io/blog/second-post/</guid>
       <description> Another post </description>
     </item>
     
     <item>
       <title>Asciidoc</title>
-      <link>http://localhost:1313/blog/first-blog/</link>
+      <link>https://guiphh.github.io/blog/first-blog/</link>
       <pubDate>Thu, 22 Nov 2018 22:32:09 +0100</pubDate>
       
-      <guid>http://localhost:1313/blog/first-blog/</guid>
+      <guid>https://guiphh.github.io/blog/first-blog/</guid>
       <description>Table 1. Test table     col1 col2     val1
  val2
     This is a demonstration of Asciidoctor. And this is the preamble of this document.
@@ -44,10 +44,10 @@
     
     <item>
       <title>First one</title>
-      <link>http://localhost:1313/blog/test/</link>
+      <link>https://guiphh.github.io/blog/test/</link>
       <pubDate>Thu, 22 Nov 2018 22:32:09 +0100</pubDate>
       
-      <guid>http://localhost:1313/blog/test/</guid>
+      <guid>https://guiphh.github.io/blog/test/</guid>
       <description>&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;This is the summarry of the article.
 Just have a look it&amp;#8217;s nice&lt;/p&gt;
