@@ -1,102 +1,111 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full font-sans">
   <head>
-    <meta charset="utf-8"/>
-    <title>Guillaume's Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="generator" content="JBake">
-
-    <!-- Le styles -->
-    <link href="css/cosmo.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/asciidoctor.css" rel="stylesheet">
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/prettify.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.min.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-    <link rel="shortcut icon" href="favicon.ico">
+	<meta name="generator" content="Hugo 0.51" />
+    <meta charset="utf-8">
+    <title>
+      My New Hugo Site
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/asciidoc.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/prism.css">
+    <link rel="stylesheet" href="/css/custom.css">
   </head>
-  <body onload="prettyPrint()">
-    <div id="wrap">
-	
-	<!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li><a href="archive.html">Archives</a></li>
-            <!--<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-            -->
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-          <li><a href="feed.xml">Rss</a></li>
-          <li><a href="https://lu.linkedin.com/in/guillaume-trompette-7230b061"><i class="fa fa-linkedin"></i></a>
-        </ul>
-        </div><!--/.nav-collapse -->
+  <body class="container pl-5 pr-5 mx-auto text-black font-sans flex flex-col h-full">
+    
+    <header>
+  <div class="container mx-auto pt-5 ">
+    <nav class="flex flex-col text-center sm:flex-row sm:text-left sm:justify-between">
+      <div>
+        <a class="text-blue hover:text-blue-darker no-underline" href="/">Home</a>
       </div>
-    </div>
-    <div class="container">
-	<div class="page-header">
-		<h1>Articles</h1>
-	</div>
-  			<a href="blog/2017/build-sql.html"><h1>Build Sql</h1></a>
-  			<p>19 January 2017</p>
-  			<p>In this article you will see how to manage migrations with sql scripts. Managing database versionning has always been a difficult part in projects. The main difficulty is that we have scripts that needs to be applyed once and others that needs to be reapply each time their version has been changed like packages or views.</p>
-	
-	<hr />
-	
-	<p>Older posts are available in the <a href="archive.html">archive</a>.</p>
+      <div>
+        <a
+          class="text-blue hover:text-blue-darker no-underline ml-2"
+          href="/blog">Blog</a>
+        <a class="text-blue hover:text-blue-darker no-underline ml-2"
+          href="/about">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-		</div>
-		<div id="push"></div>
-    </div>
+      
+    <div class="flex-auto mt-5">
+        
+<main aria-role="main">
+  <div class="homepage-content">
     
-    <div id="footer">
-      <div class="container">
-        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.5.0</a></p>
+    
+  </div>
+  <div>
+    
+    <h1 class="text-pink-darker">Latest articles</h1>
+    
+    <article class="flex flex-col justify-between leading-normal mt-6 mb-6">
+      
+        <h2>
+          <a class="text-grey-darkest no-underline" href="/blog/second-post.1/">Another Post</a>
+        </h2>
+         Another post 
+      
+    </article>
+    
+    <article class="flex flex-col justify-between leading-normal mt-6 mb-6">
+      
+        <h2>
+          <a class="text-grey-darkest no-underline" href="/blog/second-post/">Another Post</a>
+        </h2>
+         Another post 
+      
+    </article>
+    
+    <article class="flex flex-col justify-between leading-normal mt-6 mb-6">
+      
+        <h2>
+          <a class="text-grey-darkest no-underline" href="/blog/first-blog/">Asciidoc</a>
+        </h2>
+        Table 1. Test table     col1 col2     val1
+ val2
+    This is a demonstration of Asciidoctor. And this is the preamble of this document.
+ Purpose This document exercises many of the features of AsciiDoc to test the Asciidoctor implementation.
+       If you want the output to look familiar, copy (or link) the AsciiDoc stylesheet, asciidoc.
+      
+      
+      <div>
+          <a class="no-underline" href="/blog/first-blog/">Read More…</a>
       </div>
+      
+    </article>
+    
+    <article class="flex flex-col justify-between leading-normal mt-6 mb-6">
+      
+        <h2>
+          <a class="text-grey-darkest no-underline" href="/blog/test/">First one</a>
+        </h2>
+        <div class="paragraph">
+<p>This is the summarry of the article.
+Just have a look it&#8217;s nice</p>
+</div>
+      
+      
+      <div>
+          <a class="no-underline" href="/blog/test/">Read More…</a>
+      </div>
+      
+    </article>
+    
+  </div>
+</main>
+
     </div>
-    
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/prettify.js"></script>
-    
-  </body>
+      
+    <footer class="w-full text-grey-darker text-center border-t border-grey p-4 ">
+        Footer
+    </footer>
+    <script src="/js/prism.js"></script>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
 </html>
