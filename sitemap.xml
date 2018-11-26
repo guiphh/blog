@@ -1,57 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/blog/second-post.1/</loc>
-    <lastmod>2018-11-23T23:32:09+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/blog/second-post/</loc>
-    <lastmod>2018-11-23T23:32:09+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/about/</loc>
-    <lastmod>2018-11-22T22:32:09+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/blog/first-blog/</loc>
-    <lastmod>2018-11-22T22:32:09+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/blog/test/</loc>
-    <lastmod>2018-11-22T22:32:09+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/offline/</loc>
-    <lastmod>2016-10-16T19:28:41+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/blog/</loc>
-    <lastmod>2018-11-23T23:32:09+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/</loc>
-    <lastmod>2018-11-23T23:32:09+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://distracted-bose-c8dcb5.netlify.com/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/category/testimonies/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/category/sayings/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/like-nonsense/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/i-may-not-have-gone/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/i-have-not-failed/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/good-friends/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/there-are-only-two/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/imperfection-is-beauty/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/i-am-so-clever/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/people-will-forget/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/you-only-live-once/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/be-who-you-are/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/two-things-are-infinite/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/draft-post/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/success/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/category/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://distracted-bose-c8dcb5.netlify.com/search/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

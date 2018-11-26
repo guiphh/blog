@@ -1,387 +1,103 @@
-const CACHE_VERSION = 1;
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
 
-const BASE_CACHE_FILES = [
-    '/css/asciidoc.css',
-    '/css/custom.css',
-    '/css/prism.css',
-    '/js/prism.js',
-    '/manifest.json',
-    '/favicon.ico',
-];
+importScripts("workbox-v3.6.1/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "workbox-v3.6.1"});
 
-const OFFLINE_CACHE_FILES = [
-    '/css/asciidoc.css',
-    '/css/custom.css',
-    '/css/prism.css',
-    '/js/prism.js',
-    '/offline/index.html',
-];
+workbox.core.setCacheNameDetails({prefix: "gatsby-plugin-offline"});
 
-const NOT_FOUND_CACHE_FILES = [
-    '/css/custom.css',
-    '/js/prism.js',
-    '/404.html',
-];
-
-const OFFLINE_PAGE = '/offline/index.html';
-const NOT_FOUND_PAGE = '/404.html';
-
-const CACHE_VERSIONS = {
-    assets: 'assets-v' + CACHE_VERSION,
-    content: 'content-v' + CACHE_VERSION,
-    offline: 'offline-v' + CACHE_VERSION,
-    notFound: '404-v' + CACHE_VERSION,
-};
-
-// Define MAX_TTL's in SECONDS for specific file extensions
-const MAX_TTL = {
-    '/': 3600,
-    html: 3600,
-    json: 86400,
-    js: 86400,
-    css: 86400,
-};
-
-const CACHE_BLACKLIST = [
-    //(str) => {
-    //    return !str.startsWith('http://localhost') && !str.startsWith('https://gohugohq.com');
-    //},
-];
-
-const SUPPORTED_METHODS = [
-    'GET',
-];
+workbox.skipWaiting();
+workbox.clientsClaim();
 
 /**
- * isBlackListed
- * @param {string} url
- * @returns {boolean}
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
  */
-function isBlacklisted(url) {
-    return (CACHE_BLACKLIST.length > 0) ? !CACHE_BLACKLIST.filter((rule) => {
-        if(typeof rule === 'function') {
-            return !rule(url);
-        } else {
-            return false;
-        }
-    }).length : false
-}
+self.__precacheManifest = [
+  {
+    "url": "webpack-runtime-bb66f5f0fa52d6d8e745.js"
+  },
+  {
+    "url": "app.6b68ee5c9c2f8b8858fb.css"
+  },
+  {
+    "url": "app-16659013cedceb113603.js"
+  },
+  {
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-e37f2c5aa1e103e411d0.js"
+  },
+  {
+    "url": "index.html",
+    "revision": "e845b1973a4b8c3884f9031b56df59be"
+  },
+  {
+    "url": "offline-plugin-app-shell-fallback/index.html",
+    "revision": "2e270db21c7bb9ccd78291bc4088f751"
+  },
+  {
+    "url": "component---src-pages-index-js-26f6e17062b118c1c268.js"
+  },
+  {
+    "url": "0-46494f29fab284d4726e.js"
+  },
+  {
+    "url": "static/d/247/path---index-6a9-GvzKli8GZxjsVqMu6Ui2QMW4po.json",
+    "revision": "9b741da0aa01d23f2c0c130234abf9a4"
+  },
+  {
+    "url": "component---src-pages-404-js-51fc83f7b8ce86b22fe4.js"
+  },
+  {
+    "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json",
+    "revision": "c2508676a2f33ea9f1f0bf472997f9a0"
+  },
+  {
+    "url": "static/d/520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E.json",
+    "revision": "c2508676a2f33ea9f1f0bf472997f9a0"
+  },
+  {
+    "url": "manifest.webmanifest",
+    "revision": "d0c259381c8aaa104ce23ea515d4cf8c"
+  }
+].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-/**
- * getFileExtension
- * @param {string} url
- * @returns {string}
- */
-function getFileExtension(url) {
-    let extension = url.split('.').reverse()[0].split('?')[0];
-    return (extension.endsWith('/')) ? '/' : extension;
-}
+workbox.routing.registerNavigationRoute("/offline-plugin-app-shell-fallback/index.html", {
+  whitelist: [/^[^?]*([^.?]{5}|\.html)(\?.*)?$/],
+  blacklist: [/\?(.+&)?no-cache=1$/],
+});
 
-/**
- * getTTL
- * @param {string} url
- */
-function getTTL(url) {
-    if (typeof url === 'string') {
-        let extension = getFileExtension(url);
-        if (typeof MAX_TTL[extension] === 'number') {
-            return MAX_TTL[extension];
-        } else {
-            return null;
-        }
-    } else {
-        return null;
-    }
-}
+workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, workbox.strategies.staleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https:/, workbox.strategies.networkFirst(), 'GET');
+"use strict";
 
-/**
- * installServiceWorker
- * @returns {Promise}
- */
-function installServiceWorker() {
-    return Promise.all(
-        [
-            caches.open(CACHE_VERSIONS.assets)
-                .then(
-                    (cache) => {
-                        return cache.addAll(BASE_CACHE_FILES);
-                    }
-                ),
-            caches.open(CACHE_VERSIONS.offline)
-                .then(
-                    (cache) => {
-                        return cache.addAll(OFFLINE_CACHE_FILES);
-                    }
-                ),
-            caches.open(CACHE_VERSIONS.notFound)
-                .then(
-                    (cache) => {
-                        return cache.addAll(NOT_FOUND_CACHE_FILES);
-                    }
-                )
-        ]
-    )
-        .then(() => {
-            return self.skipWaiting();
+/* global workbox */
+self.addEventListener("message", function (event) {
+  var api = event.data.api;
+
+  if (api === "gatsby-runtime-cache") {
+    var resources = event.data.resources;
+    var cacheName = workbox.core.cacheNames.runtime;
+    event.waitUntil(caches.open(cacheName).then(function (cache) {
+      return Promise.all(resources.map(function (resource) {
+        return cache.add(resource).catch(function (e) {
+          // ignore TypeErrors - these are usually due to
+          // external resources which don't allow CORS
+          if (!(e instanceof TypeError)) throw e;
         });
-}
-
-/**
- * cleanupLegacyCache
- * @returns {Promise}
- */
-function cleanupLegacyCache() {
-
-    let currentCaches = Object.keys(CACHE_VERSIONS)
-        .map(
-            (key) => {
-                return CACHE_VERSIONS[key];
-            }
-        );
-
-    return new Promise(
-        (resolve, reject) => {
-
-            caches.keys()
-                .then(
-                    (keys) => {
-                        return legacyKeys = keys.filter(
-                            (key) => {
-                                return !~currentCaches.indexOf(key);
-                            }
-                        );
-                    }
-                )
-                .then(
-                    (legacy) => {
-                        if (legacy.length) {
-                            Promise.all(
-                                legacy.map(
-                                    (legacyKey) => {
-                                        return caches.delete(legacyKey)
-                                    }
-                                )
-                            )
-                                .then(
-                                    () => {
-                                        resolve()
-                                    }
-                                )
-                                .catch(
-                                    (err) => {
-                                        reject(err);
-                                    }
-                                );
-                        } else {
-                            resolve();
-                        }
-                    }
-                )
-                .catch(
-                    () => {
-                        reject();
-                    }
-                );
-
-        }
-    );
-}
-
-function precacheUrl(url) {
-    if(!isBlacklisted(url)) {
-        caches.open(CACHE_VERSIONS.content)
-            .then((cache) => {
-                cache.match(url)
-                    .then((response) => {
-                        if(!response) {
-                            return fetch(url)
-                        } else {
-                            // already in cache, nothing to do.
-                            return null
-                        }
-                    })
-                    .then((response) => {
-                        if(response) {
-                            return cache.put(url, response.clone());
-                        } else {
-                            return null;
-                        }
-                    });
-            })
-    }
-}
-
-
-
-self.addEventListener(
-    'install', event => {
-        event.waitUntil(
-            Promise.all([
-                installServiceWorker(),
-                self.skipWaiting(),
-            ])
-        );
-    }
-);
-
-// The activate handler takes care of cleaning up old caches.
-self.addEventListener(
-    'activate', event => {
-        event.waitUntil(
-            Promise.all(
-                [
-                    cleanupLegacyCache(),
-                    self.clients.claim(),
-                    self.skipWaiting(),
-                ]
-            )
-                .catch(
-                    (err) => {
-                        event.skipWaiting();
-                    }
-                )
-        );
-    }
-);
-
-self.addEventListener(
-    'fetch', event => {
-
-        event.respondWith(
-            caches.open(CACHE_VERSIONS.content)
-                .then(
-                    (cache) => {
-
-                        return cache.match(event.request)
-                            .then(
-                                (response) => {
-
-                                    if (response) {
-
-                                        let headers = response.headers.entries();
-                                        let date = null;
-
-                                        for (let pair of headers) {
-                                            if (pair[0] === 'date') {
-                                                date = new Date(pair[1]);
-                                            }
-                                        }
-
-                                        if (date) {
-                                            let age = parseInt((new Date().getTime() - date.getTime()) / 1000);
-                                            let ttl = getTTL(event.request.url);
-
-                                            if (ttl && age > ttl) {
-
-                                                return new Promise(
-                                                    (resolve) => {
-
-                                                        return fetch(event.request.clone())
-                                                            .then(
-                                                                (updatedResponse) => {
-                                                                    if (updatedResponse) {
-                                                                        cache.put(event.request, updatedResponse.clone());
-                                                                        resolve(updatedResponse);
-                                                                    } else {
-                                                                        resolve(response)
-                                                                    }
-                                                                }
-                                                            )
-                                                            .catch(
-                                                                () => {
-                                                                    resolve(response);
-                                                                }
-                                                            );
-
-                                                    }
-                                                )
-                                                    .catch(
-                                                        (err) => {
-                                                            return response;
-                                                        }
-                                                    );
-                                            } else {
-                                                return response;
-                                            }
-
-                                        } else {
-                                            return response;
-                                        }
-
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            )
-                            .then(
-                                (response) => {
-                                    if (response) {
-                                        return response;
-                                    } else {
-                                        return fetch(event.request.clone())
-                                            .then(
-                                                (response) => {
-
-                                                    if(response.status < 400) {
-                                                        if (~SUPPORTED_METHODS.indexOf(event.request.method) && !isBlacklisted(event.request.url)) {
-                                                            cache.put(event.request, response.clone());
-                                                        }
-                                                        return response;
-                                                    } else {
-                                                        return caches.open(CACHE_VERSIONS.notFound).then((cache) => {
-                                                            return cache.match(NOT_FOUND_PAGE);
-                                                        })
-                                                    }
-                                                }
-                                            )
-                                            .then((response) => {
-                                                if(response) {
-                                                    return response;
-                                                }
-                                            })
-                                            .catch(
-                                                () => {
-
-                                                    return caches.open(CACHE_VERSIONS.offline)
-                                                        .then(
-                                                            (offlineCache) => {
-                                                                return offlineCache.match(OFFLINE_PAGE)
-                                                            }
-                                                        )
-
-                                                }
-                                            );
-                                    }
-                                }
-                            )
-                            .catch(
-                                (error) => {
-                                    console.error('  Error in fetch handler:', error);
-                                    throw error;
-                                }
-                            );
-                    }
-                )
-        );
-
-    }
-);
-
-
-self.addEventListener('message', (event) => {
-
-    if(
-        typeof event.data === 'object' &&
-        typeof event.data.action === 'string'
-    ) {
-        switch(event.data.action) {
-            case 'cache' :
-                precacheUrl(event.data.url);
-                break;
-            default :
-                console.log('Unknown action: ' + event.data.action);
-                break;
-        }
-    }
-
+      }));
+    }));
+  }
 });
